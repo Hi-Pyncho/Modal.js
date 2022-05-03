@@ -1,10 +1,10 @@
 const path = require('path')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/js/script.js'),
+  entry: path.resolve(__dirname, 'docs/js/script.js'),
   output: {
     filename: 'Modal.min.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs/js'),
     library: 'Modal',
     libraryExport: 'default',
     libraryTarget: 'umd',
