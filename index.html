@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/style.css">
+  <script type="module" defer src="src/js/main.js"></script>
+  <title>Test Modal</title>
+</head>
+
+<body>
+  <button type="button" class="ajax">
+    Init modal from js script (ajax)
+  </button>
+  <button type="button" data-m-modal data-type="ajax" data-target="/src/content.html">
+    Init modal from current tag attributes (ajax)
+  </button>
+  <button type="button" data-m-modal data-type="selector" data-target=".hidden-block">
+    Init modal from current tag attributes (selector)
+  </button>
+  <button type="button" data-m-modal data-type="image" data-height="700px" data-target="https://images11.esquire.ru/upload/img_cache/358/358c28299f0079cac9511091c16b331d_cropped_666x833.jpg">
+    Init modal from current tag attributes (image)
+  </button>
+
+  <div class="hidden-block">
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam veniam illo esse quod fugit, qui perspiciatis odio officia dignissimos labore, repellat obcaecati magni praesentium amet.
+    </p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Fugit rerum tempore ad nobis?</li>
+      <li>Ratione voluptatem omnis libero sit.</li>
+    </ul>
+  </div>
+</body>
+
+<style>
+  .hidden-block {
+    display: none;
+  }
+</style>
+
+
+</html>
