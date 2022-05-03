@@ -1,4 +1,4 @@
-import '../../dist/Modal.min.js'
+// import '../../dist/Modal.min.js'
 const button = document.querySelector('.ajax')
 
 new Modal({

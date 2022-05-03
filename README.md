@@ -2,6 +2,7 @@
 
 This is a small library for creating modal windows.
 I used one dependency - [dompurify](https://github.com/cure53/DOMPurify) in my script, to sanitize html in `innerHTML` method.
+By now you can <a download href='dist/Modal.min.js'>download</a> a source script file.
 
 ## Use
 You can initialize `Modal` in two ways: 
