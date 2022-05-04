@@ -9,6 +9,8 @@ You can initialize `Modal` in two ways:
 1) [by setting attributes to a html tag](#set-attributes-to-a-trigger-tag)
 2) [call an instance of a class](#call-an-instance-of-a-class)
 
+See examples [here](https://hi-pyncho.github.io/Modal.js/).
+
 ## Set attributes to a trigger tag
 First you need initialize class instance in script.
 ```js
