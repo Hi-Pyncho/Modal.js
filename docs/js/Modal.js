@@ -1,4 +1,4 @@
-import { sanitize } from 'dompurify'
+import 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js'
 
 export default class Modal {
   constructor({
@@ -109,7 +109,7 @@ export default class Modal {
     switch (this.type) {
       case 'ajax':
         const data = await this.fetchData()
-        const cleanData = sanitize(data)
+        const cleanData = DOMPurify.sanitize(data)
         container.innerHTML = cleanData
         return
       case 'selector':
