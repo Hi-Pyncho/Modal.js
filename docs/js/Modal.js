@@ -191,9 +191,9 @@ export default class Modal {
     };
   }
   async setOptions() {
-    document.documentElement.style = `--m-modal-z-index: ${this.zIndex}`
-    document.documentElement.style = `--m-modal-width: ${this.modalWidth}`
-    document.documentElement.style = `--m-modal-height: ${this.modalHeight}`
+    document.documentElement.style.setProperty('--m-modal-z-index', `${this.zIndex}`)
+    document.documentElement.style.setProperty('--m-modal-width', `${this.modalWidth}`) 
+    document.documentElement.style.setProperty('--m-modal-height', `${this.modalHeight}`)
   }
   triggerHandler() {
     this.trigger.addEventListener('click', async () => {
@@ -230,6 +230,3 @@ export default class Modal {
     return response
   }
 }
-
-
-
