@@ -12,7 +12,7 @@ export default class Modal {
     context,
     emptyInit = false,
     openNow = false,
-    display = 'block'
+    display = 'block',
   }) {
     this.zIndex = zIndex
     this.type = type
@@ -81,6 +81,12 @@ export default class Modal {
     
     return close
   }
+  blockHTML() {
+    document.documentElement.style.overflow = 'hidden'
+  }
+  unblockHTML() {
+    document.documentElement.style.overflow = 'initial'
+  }
   createOuterWrapper() {
     const wrapper = document.createElement('div')
     wrapper.classList.add(`${this.prefix}-wrapper`)
@@ -148,6 +154,7 @@ export default class Modal {
     return image
   }
   closeModal() {
+    this.unblockHTML()
     this.overlay.classList.remove(`${this.prefix}-overlay--active`)
     setTimeout(() => {
       this.overlay.remove()
@@ -155,6 +162,7 @@ export default class Modal {
     }, 500);
   }
   async openModal() {
+    this.blockHTML()
     this.overlay.classList.add(`${this.prefix}-overlay--active`)
   }
   closeButtonHandler() {
