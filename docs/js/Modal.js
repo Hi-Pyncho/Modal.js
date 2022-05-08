@@ -202,8 +202,20 @@ export default class Modal {
       await this.openModal()
       await this.addListeners()
       await this.findTriggers(this.wrapper)
+      await this.triggerCustomEvent()
     })
   }
+
+  triggerCustomEvent() { 
+    const event = new CustomEvent('m-modal', {
+      detail: {
+        wrapper: this.wrapper
+      }
+    })
+  
+    document.dispatchEvent(event)
+  }
+
   async addListeners() {
     this.overlayHandler()
     this.closeButtonHandler()
