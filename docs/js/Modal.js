@@ -6,7 +6,7 @@ export default class Modal {
     type,
     target,
     trigger,
-    modalWidth = '90%',
+    modalWidth = 'max-content',
     modalHeight = 'auto',
     needFindTriggers = true,
     context,
@@ -150,6 +150,9 @@ export default class Modal {
     image.src = this.target
     image.style.maxWidth = '100%'
     image.style.display = 'block'
+    image.style.width = '100%'
+    image.style.height = '100%'
+    image.style.objectFit = 'contain'
 
     return image
   }

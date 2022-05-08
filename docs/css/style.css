@@ -23,8 +23,8 @@
   background-color: #fff;
   width: var(--m-modal-width);
   height: var(--m-modal-height);
-  max-height: 90%;
-  max-width: 1200px;
+  max-width: 90vw;
+  max-height: 100vh;
   overflow-y: auto;
 }
 .m-modal-inner-wrapper {
